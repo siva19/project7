@@ -1,0 +1,7 @@
+%h1 Directors#edit
+%h2 Edit Director information
+%p Find me in app/views/directors/edit.html.haml
+= form_tag director_path(@director), :method => :put do
+  = label :director, :name, 'Name'
+  = text_field :director, :name
+  = submit_tag 'Save changes'

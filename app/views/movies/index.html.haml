@@ -1,0 +1,17 @@
+%h1 movies#index
+%p 
+="Movies from " + @director.name + " director" 
+%table#movies
+  %thead
+    %tr
+      %th Title
+      %th Rating
+      %th Released Year
+    %tbody
+      - @movies.each do |movie|
+        %tr
+          %td= movie.title
+          %td= movie.rating
+          %td= movie.releasedyear
+          %td= link_to "Edit movie information", edit_director_movie_path(movie.director, movie)
+=link_to 'Add new movie', new_director_movie_path(@director)

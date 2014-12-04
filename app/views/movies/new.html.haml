@@ -1,0 +1,12 @@
+%h1 movies#new
+%p 
+="Adding a new movie to " + @director.name + " director" 
+%h2 Create a new movie
+= form_tag director_movies_path(@director), :method => :post do
+  = label :movie, :title, 'Title'
+  = string :movie, :title
+  = label :movie , :rating, 'Rating' 
+  = string :movie, :rating
+  = label :movie, :releasedyear, 'Released Year'
+  = string :movie, :releasedyear
+  = submit_tag 'Save changes'

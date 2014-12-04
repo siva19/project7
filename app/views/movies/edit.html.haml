@@ -1,0 +1,11 @@
+%h1 movies#edit
+%p Find me in app/views/movies/edit.html.haml
+%h2 Editing movie
+= form_tag director_movie_path(movie_id: @movie.id), :method => :put do
+  = label :movie, :title, 'Title'
+  = string :movie, :title
+  = label :movie , :rating, 'Rating' 
+  = string :movie, :rating
+  = label :movie, :releasedyear, 'Released Year'
+  = string :movie, :releasedyear
+  = submit_tag 'Save changes'

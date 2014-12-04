@@ -1,0 +1,15 @@
+%h1 All Directors
+%p Find me in app/views/directors/index.html.haml
+%table#directors
+  %thead
+    %tr
+      %th Name
+      %th 
+      %th movies
+    %tbody
+      - @directors.each do |d|
+        %tr
+          %td= d.name
+          %td= link_to "Edit #{d.name}",director_path(d)
+          %td= link_to "View movies", director_movies_path(d)
+=link_to 'Add new director', new_director_path

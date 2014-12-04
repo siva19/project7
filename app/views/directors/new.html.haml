@@ -1,0 +1,7 @@
+%h1 Directors#new
+%p Find me in app/views/directors/new.html.haml
+%h2 Create a new Director
+= form_tag directors_path, :method => :post do
+  = label :director, :name, 'Name'
+  = text_field :director, :name
+  = submit_tag 'Save changes'
