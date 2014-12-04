@@ -1,6 +1,6 @@
 class Director < ActiveRecord::Base
   
-	has_many :movies, dependent: :destroy
-  validates :name, presence: true
+	has_many :movie, dependent: :destroy
+  validates :movie, presence: true
 
 end
